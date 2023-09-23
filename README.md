@@ -47,11 +47,33 @@ Before you begin, ensure you have met the following requirements:
     MONGODB_PWD=SecurePassword
     ```
 
-## Start server
+## Run your server
 ```
 npm run start
 ```
 Then application will start successfull with below message:
 ```
 Server is running on port 3000
+```
+
+## Test your GraphQL API
+
+You can use a tool like GraphQL Playground or Apollo Studio to test your GraphQL API by visiting http://localhost:3000/graphql in your browser. Here are some example queries and mutations:
+
+```
+# Query for a book by ID
+query {
+  book(id: "your-book-id") {
+    title
+    author
+  }
+}
+
+# Create a new book
+mutation {
+  createBook(title: "The Great Gatsby", author: "F. Scott Fitzgerald") {
+    title
+    author
+  }
+}
 ```
