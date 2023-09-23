@@ -1,0 +1,5 @@
+use('graphql-mongodb');
+db.createUser({
+    user: "socheat",
+    pwd: "SecurePwd",
+    roles: [{ role: "readWrite", db: "graphql-mongodb" }]
