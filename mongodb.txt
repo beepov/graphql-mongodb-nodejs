@@ -1,5 +1,10 @@
-use('graphql-mongodb');
+const database = 'graphql-mongodb';
+use(database);
 db.createUser({
     user: "socheat",
-    pwd: "SecurePwd",
+    pwd: "Secpwd12345",
     roles: [{ role: "readWrite", db: "graphql-mongodb" }]
+});
+
+## VSCode connection string
+mongodb://root:Secpwd123@localhost:27017/admin
